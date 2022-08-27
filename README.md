@@ -1,2 +1,2 @@
-# build_pypi
-Publish a python package to Pypi
+# Hello World Functor
+`eons.UserFunctor` that can be used for testing purposes.
