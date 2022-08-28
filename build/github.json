@@ -1,5 +1,5 @@
 {
-  "name" : "py",
+  "name" : "hello_world",
   "type" : "build",
   "build_in" : "github",
   "clear_build_path" : true,
