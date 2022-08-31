@@ -1,0 +1,31 @@
+{
+  "next": [
+    {
+      "run_when_any" : [
+        "release"
+      ],
+      "build" : "publish",
+      "build_in" : "functor_hello_world",
+      "copy" : [
+        {"../../../inc/hello_world.py" : "functor_hello_world/hello_world.py"}
+      ],
+      "config" : {
+        "name" : "hello_world",
+        "type" : "functor",
+        "clear_build_path" : false,
+        "visibility" : "public"
+      }
+    },
+    {
+      "run_when_any" : [
+        "schedule"
+      ],
+      "build" : "proxy",
+      "build_in" : "./",
+      "config" : {
+        "clear_build_path" : false,
+        "proxy" : "../../config/schedule.json"
+      }
+    }
+  ]
+}
