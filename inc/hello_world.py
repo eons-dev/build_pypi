@@ -1,20 +1,16 @@
 import os
 import logging
-from eons import UserFunctor
-
+import eons
 
 # Class name is what is used at cli, so we defy convention here in favor of ease-of-use.
-class hello_world(UserFunctor):
+class hello_world(eons.Functor):
     def __init__(this, name="Hello World"):
         super().__init__(name)
 
-        this.clearBuildPath = False
-        this.supportedProjectTypes = []
-
     # Required UserFunctor method. See that class for details.
-    def DidUserFunctionSucceed(this):
+    def DidFunctionSucceed(this):
         return True 
 
     # Required UserFunctor method. See that class for details.
-    def UserFunction(this, **kwargs):
+    def Function(this):
         print("Hello world!")
